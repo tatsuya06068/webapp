@@ -8,6 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+import '../styles/index'
 import "materialize-css/dist/js/materialize.min.js";
 M.AutoInit();
 
