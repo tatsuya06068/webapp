@@ -1,2 +1,19 @@
-h1 Tasks#new
-p Find me in app/views/tasks/new.html.slim
+h2 タスク新規登録
+
+.right-align
+    = link_to '一覧',tasks_path, class: 'waves-effect waves-teal btn-flat cyan-text text-accent-2'
+
+.row
+    = form_with model: @task, class: 'col s12', local:true do |f|
+     .row
+        .input-field.col.s6
+            = f.label :name
+            = f.text_field :name, class: 'validate', id: 'task_name'
+     .row
+        .input-field.col.s6
+            =f.label :description
+            =f.text_area :description, rows: 5, class: 'validate materialize-textarea', id: 'task_description'
+     = f.submit nil, class: 'btn waves-effect waves-light card-panel light-blue lighten-3'
+ 
+   
+
