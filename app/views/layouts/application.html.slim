@@ -12,4 +12,6 @@ html
       .nav-wrapper.container
         .brand-logo Taskleaf
     .container
-     = yield
+      -if flash.notice.present?
+        .card-panel.teal.accent-2= flash.notice
+      = yield
