@@ -19,3 +19,5 @@ hr.grey-text.text-lighten-1
                     td= task.name
                     td= task.description
                     td= task.created_at
+                    td
+                     = link_to '削除', task, method: :delete, data: { confirm: "タスク「#{task.name}」を削除します。よろしいですか？" }, class: 'btn card-panel  red darken-1'
