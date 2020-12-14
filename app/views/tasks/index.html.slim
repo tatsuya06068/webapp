@@ -1,4 +1,11 @@
 h3 タスク一覧
+.row
+ = search_form_for @q, class: 'col m5' do |f|
+  .input-field.col.s6
+    =f.label :name_cont, '名称'
+    =f.search_field :name_cont
+  .row
+    =f.submit class: 'waves-effect waves-light btn '
 
 =link_to '新規登録', new_task_path, class: 'waves-effect waves-light btn'
 
