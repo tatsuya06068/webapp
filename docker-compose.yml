@@ -18,6 +18,11 @@ services:
       - log-data:/webapp/log
     depends_on:
       - db
+      - chrome
+  chrome:
+     image: selenium/standalone-chrome:latest
+     ports:
+       - 4444:4444
   db:
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
